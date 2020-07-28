@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+.landing {
+  font-family: 'Graduate', cursive;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+.caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 10;
+  padding: 10px;
+}
+h1 {
+  margin: 5px;
+  color: white;
+  font-weight: 1;
+  font-size: 60px;
+}
+p {
+  color: white;
+  text-align: center;
+  font-family: Ubuntu;
+  width: 50%;
+
+  flex: 1;
+}
+.dynamic {
+  color: rgb(183, 194, 218);
+  animation-name: example;
+  animation-duration: 2999.5ms;
+  animation-iteration-count: infinite;
+}
+@keyframes example {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.line {
+  border: 1px solid;
+  height: 30px;
+  background-color: whitesmoke;
+  opacity: 0.7;
+}
+.welcome {
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 150px;
+  color: whitesmoke;
+  opacity: 0.2;
+  flex: 1;
+}

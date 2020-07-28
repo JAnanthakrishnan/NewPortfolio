@@ -1,0 +1,47 @@
+:root {
+  --bg-color: #031321;
+  --primary-color: #a9add3;
+  --secondary-color: #816ce0;
+}
+
+#navbar {
+  position: fixed;
+  top: 1rem;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0.2;
+  width: 100%;
+  height: 10vh;
+  overflow: hidden;
+  transition: top 0.3s;
+}
+a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+  margin: 40px;
+}
+a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after {
+  width: 100%;
+  left: 0;
+}
