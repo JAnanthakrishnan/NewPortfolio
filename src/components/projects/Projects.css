@@ -1,0 +1,11 @@
+#projects {
+  background-color: rgb(180, 168, 168);
+  min-height: 100vh;
+}
+#projects h1 {
+  margin-top: 100px;
+  text-align: center;
+  color: rgb(73, 70, 67);
+  font-weight: bold;
+  text-transform: uppercase;
+}

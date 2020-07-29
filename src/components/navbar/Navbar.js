@@ -8,11 +8,17 @@ class Navbar extends React.Component {
       clicked: false
     };
     this.handleClick = this.handleClick.bind(this);
+    this.removeMenu = this.removeMenu.bind(this);
   }
   handleClick() {
     this.setState((state) => ({
       clicked: !state.clicked
     }));
+  }
+  removeMenu() {
+    this.setState({
+      clicked: false
+    });
   }
   render() {
     let classname = 'nav-items';
@@ -28,22 +34,26 @@ class Navbar extends React.Component {
     return (
       <div>
         <div className={classname} id='navbar'>
-          <a href='#!' className='icon' id='menu' onClick={this.handleClick}>
+          <a href='#home' className='icon' id='menu' onClick={this.handleClick}>
             <i className={iconclass}></i>
           </a>
           <ul className='nav-items' id='nav-items'>
             <li className='nav-link'>
-              <a href='#!' className='first'>
+              <a href='#home' className='first link' onClick={this.removeMenu}>
                 Home
               </a>
             </li>
             <li className='nav-link'>
-              <a href='#!' className='second'>
+              <a
+                href='#projects'
+                className='second link'
+                onClick={this.removeMenu}
+              >
                 Projects
               </a>
             </li>
             <li className='nav-link'>
-              <a href='#!' className='third'>
+              <a href='#!' className='third link' onClick={this.removeMenu}>
                 About
               </a>
             </li>

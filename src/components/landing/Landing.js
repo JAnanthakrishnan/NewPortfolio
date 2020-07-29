@@ -35,7 +35,7 @@ class Landing extends React.Component {
       prevScrollpos = currentScrollPos;
     };
     return (
-      <div className='landing'>
+      <div className='landing' id='home'>
         <VideoBg />
         <div className='container'>
           <div className='welcome'>

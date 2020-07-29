@@ -18,6 +18,7 @@
   overflow: hidden;
   transition: top 0.3s;
 }
+.link,
 a {
   color: #fff;
   text-transform: uppercase;
@@ -28,7 +29,7 @@ a {
   position: relative;
   margin: 20px;
 }
-.nav-link a:after {
+.nav-link .link:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: '';
@@ -40,7 +41,7 @@ a {
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
-.nav-link a:hover:after {
+.nav-link .link:hover:after {
   width: 100%;
   left: 0;
   margin-left: auto;
