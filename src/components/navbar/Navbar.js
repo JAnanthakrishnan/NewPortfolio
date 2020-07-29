@@ -31,6 +31,7 @@ class Navbar extends React.Component {
       classname = 'navbar';
       iconclass = 'fa fa-bars fa-lg';
     }
+
     console.log(classname);
     return (
       <div>
