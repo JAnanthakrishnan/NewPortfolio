@@ -22,18 +22,18 @@ class Landing extends React.Component {
     }));
   }
   render() {
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function () {
-      var currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        document.getElementById('navbar').style.top = '1rem';
-        document.getElementById('ak_logo').style.top = '1rem';
-      } else {
-        document.getElementById('navbar').style.top = '-100px';
-        document.getElementById('ak_logo').style.top = '-100px';
-      }
-      prevScrollpos = currentScrollPos;
-    };
+    // var prevScrollpos = window.pageYOffset;
+    // window.onscroll = function () {
+    //   var currentScrollPos = window.pageYOffset;
+    //   if (prevScrollpos > currentScrollPos) {
+    //     document.getElementById('navbar').style.top = '0rem';
+    //     document.getElementById('ak_logo').style.top = '0rem';
+    //   } else {
+    //     document.getElementById('navbar').style.top = '-100px';
+    //     document.getElementById('ak_logo').style.top = '-100px';
+    //   }
+    //   prevScrollpos = currentScrollPos;
+    // };
     return (
       <div className='landing' id='home'>
         <VideoBg />

@@ -1,7 +1,7 @@
 .logo {
   margin-right: auto;
   position: fixed;
-  top: 1rem;
+  top: 0rem;
   left: 1rem;
   opacity: 0.3;
   transition: top 0.3s;
