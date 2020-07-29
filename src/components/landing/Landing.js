@@ -27,8 +27,10 @@ class Landing extends React.Component {
       var currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
         document.getElementById('navbar').style.top = '1rem';
+        document.getElementById('ak_logo').style.top = '1rem';
       } else {
         document.getElementById('navbar').style.top = '-100px';
+        document.getElementById('ak_logo').style.top = '-100px';
       }
       prevScrollpos = currentScrollPos;
     };
@@ -42,7 +44,7 @@ class Landing extends React.Component {
           </div>
           <div className='caption'>
             <h1>J ANANTHAKRISHNAN</h1>
-            <h1 class='dynamic'>{this.state.elements[this.state.index]}</h1>
+            <h1 className='dynamic'>{this.state.elements[this.state.index]}</h1>
           </div>
           <p>"Code and Develop"</p>
         </div>
