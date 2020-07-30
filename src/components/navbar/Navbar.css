@@ -12,13 +12,15 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
-  opacity: 0.5;
-  background-color: rgba(0, 0, 0, 0.548);
+  opacity: 1;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+  background-color: transparent;
   width: 100%;
   height: 10vh;
   min-height: 80px;
   overflow: hidden;
   transition: top 0.3s;
+  z-index: 2;
 }
 
 .link,
@@ -26,15 +28,16 @@ a {
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
   display: inline-block;
-  padding: 15px 20px;
+  padding: 15px 10px;
   position: relative;
-  margin: 20px;
+  margin: 10px;
   cursor: pointer;
+  opacity: 0.5;
 }
 .active {
-  color: rgb(23, 189, 98);
+  color: rgb(48, 104, 73);
 }
 .nav-link .link:after {
   background: none repeat scroll 0 0 transparent;
@@ -75,19 +78,18 @@ ul {
   padding: 0;
   margin: 0;
   position: fixed;
-  top: 0;
+  top: 0rem;
   right: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   padding: 0;
   min-width: 100vw;
   min-height: 100vh;
   z-index: 2;
-  background-color: black;
-  opacity: 0.8;
+  opacity: 0.9;
+  background-color: rgb(72, 71, 75);
   overflow: hidden;
   animation-name: colorChange;
   animation-duration: 1s;
@@ -96,11 +98,9 @@ ul {
 @keyframes colorChange {
   from {
     opacity: 0.1;
-    background-color: rgb(94, 82, 105);
+    background-color: black;
   }
   to {
-    opacity: 0.8;
-    background-color: black;
   }
 }
 .icon {
@@ -108,7 +108,7 @@ ul {
 }
 .menu .first {
   animation-name: from-left;
-  animation-duration: 300ms;
+  animation-duration: 800ms;
   animation-iteration-count: 1;
 }
 .menu .second {
@@ -118,35 +118,30 @@ ul {
 }
 .menu .third {
   animation-name: from-right;
-  animation-duration: 300ms;
+  animation-duration: 800ms;
   animation-iteration-count: 1;
 }
 @keyframes from-left {
   from {
-    opacity: 0.4;
     transform: translateX(-100px);
   }
   to {
-    opacity: 1;
     transform: translateX(0);
   }
 }
 @keyframes from-right {
   from {
-    opacity: 0.4;
     transform: translateX(100px);
   }
   to {
-    opacity: 1;
     transform: translateX(0);
   }
 }
 @keyframes fade-in {
   from {
-    opacity: 0;
+    transform: rotate(180deg);
   }
   to {
-    opacity: 1;
   }
 }
 @media screen and (max-width: 1170px) {

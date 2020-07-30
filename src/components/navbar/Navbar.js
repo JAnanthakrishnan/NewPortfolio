@@ -1,6 +1,6 @@
 import React from 'react';
 import './Navbar.css';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -36,7 +36,7 @@ class Navbar extends React.Component {
     return (
       <div>
         <div className={classname} id='navbar'>
-          <a href='#home' className='icon' onClick={this.handleClick}>
+          <a href='#!' className='icon' onClick={this.handleClick}>
             <i className={iconclass}></i>
           </a>
           <ul className='nav-items' id='nav-items'>
@@ -73,9 +73,36 @@ class Navbar extends React.Component {
               </Link>
             </li>
             <li className='nav-link'>
-              <a href='#!' className='third link' onClick={this.removeMenu}>
+              <Link
+                to='about'
+                smooth={true}
+                spy={true}
+                hashSpy={true}
+                activeClass='active'
+                duration={500}
+                delay={10}
+                isDynamic={true}
+                className='third link'
+                onClick={this.removeMenu}
+              >
                 About
-              </a>
+              </Link>
+            </li>
+            <li className='nav-link'>
+              <Link
+                to='contact'
+                smooth={true}
+                spy={true}
+                hashSpy={true}
+                activeClass='active'
+                duration={500}
+                delay={10}
+                isDynamic={true}
+                className='fourth link'
+                onClick={this.removeMenu}
+              >
+                Contact
+              </Link>
             </li>
           </ul>
         </div>

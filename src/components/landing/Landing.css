@@ -4,6 +4,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -36,8 +37,9 @@ p {
 }
 .dynamic {
   color: rgb(183, 194, 218);
+  opacity: 0;
   animation-name: example;
-  animation-duration: 2999.5ms;
+  animation-duration: 3000ms;
   animation-iteration-count: infinite;
 }
 @keyframes example {
@@ -48,6 +50,12 @@ p {
   10% {
     opacity: 1;
     transform: translateY(0px);
+  }
+  80% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
   }
 }
 
@@ -67,7 +75,7 @@ p {
   font-size: 10px;
   text-transform: uppercase;
   color: whitesmoke;
-  opacity: 0.9;
+  opacity: 0.2;
   z-index: 0;
 }
 .welcome h3 {

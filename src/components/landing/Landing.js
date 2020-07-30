@@ -22,20 +22,25 @@ class Landing extends React.Component {
     }));
   }
   render() {
-    // var prevScrollpos = window.pageYOffset;
-    // window.onscroll = function () {
-    //   var currentScrollPos = window.pageYOffset;
-    //   if (prevScrollpos > currentScrollPos) {
-    //     document.getElementById('navbar').style.top = '0rem';
-    //     document.getElementById('ak_logo').style.top = '0rem';
-    //   } else {
-    //     document.getElementById('navbar').style.top = '-100px';
-    //     document.getElementById('ak_logo').style.top = '-100px';
-    //   }
-    //   prevScrollpos = currentScrollPos;
-    // };
+    var prevScrollpos = window.pageYOffset;
+    var currentScrollPos = window.pageYOffset;
+    window.onscroll = function () {
+      currentScrollPos = window.pageYOffset;
+      if (
+        prevScrollpos > currentScrollPos ||
+        window.innerHeight - (currentScrollPos % window.innerHeight) < 10
+      ) {
+        document.getElementById('navbar').style.top = '0rem';
+        document.getElementById('ak_logo').style.top = '0rem';
+      } else {
+        document.getElementById('navbar').style.top = '-100px';
+        document.getElementById('ak_logo').style.top = '-100px';
+      }
+      prevScrollpos = currentScrollPos;
+    };
+
     return (
-      <div className='landing' id='home'>
+      <section className='landing' id='home'>
         <VideoBg />
         <div className='container'>
           <div className='welcome'>
@@ -48,7 +53,7 @@ class Landing extends React.Component {
           </div>
           <p>"Code and Develop"</p>
         </div>
-      </div>
+      </section>
     );
   }
 }

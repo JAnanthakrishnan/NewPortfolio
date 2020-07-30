@@ -1,5 +1,5 @@
 import React from 'react';
-import ak from './ak.svg';
+import ak from './ak.webp';
 import './Logo.css';
 const Logo = () => {
   return (
