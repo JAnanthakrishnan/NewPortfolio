@@ -1,5 +1,4 @@
 import React from 'react';
-import { Scroll, ScrollProvider, ScrollLink } from 'react-skroll';
 import './App.css';
 import Landing from './components/landing/Landing';
 import Navbar from './components/navbar/Navbar';

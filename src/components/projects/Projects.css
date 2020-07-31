@@ -138,7 +138,7 @@
 .projectsList {
   display: grid;
   background-color: transparent;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   grid-gap: 20px 50px;
   padding: 0;
 }
@@ -170,4 +170,14 @@
 .linktoproject:hover {
   transform: translateY(-5px);
   background-color: rgba(210, 105, 30, 0.192);
+}
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projectsList {
+    grid-template-columns: auto auto;
+  }
+}
+@media screen and (max-width: 769px) {
+  .projectsList {
+    grid-template-columns: auto;
+  }
 }

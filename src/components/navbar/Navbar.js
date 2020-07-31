@@ -59,13 +59,9 @@ class Navbar extends React.Component {
             <li className='nav-link'>
               <Link
                 to='projects'
-                smooth={true}
                 spy={true}
                 hashSpy={true}
                 activeClass='active'
-                duration={500}
-                delay={10}
-                isDynamic={true}
                 className='second link'
                 onClick={this.removeMenu}
               >
@@ -75,13 +71,9 @@ class Navbar extends React.Component {
             <li className='nav-link'>
               <Link
                 to='about'
-                smooth={true}
                 spy={true}
                 hashSpy={true}
                 activeClass='active'
-                duration={500}
-                delay={10}
-                isDynamic={true}
                 className='third link'
                 onClick={this.removeMenu}
               >
@@ -91,13 +83,9 @@ class Navbar extends React.Component {
             <li className='nav-link'>
               <Link
                 to='contact'
-                smooth={true}
                 spy={true}
                 hashSpy={true}
                 activeClass='active'
-                duration={500}
-                delay={10}
-                isDynamic={true}
                 className='fourth link'
                 onClick={this.removeMenu}
               >

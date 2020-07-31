@@ -12,6 +12,7 @@ class Projects extends React.Component {
   }
   handleClick(e) {
     e.persist();
+    e.preventDefault();
     this.setState((state) => ({
       clicked: !state.clicked,
       target: e.target.id
