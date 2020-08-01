@@ -1,7 +1,8 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Headland+One&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&family=Permanent+Marker&display=swap');
 .landing {
   /* font-family: 'Headland One', serif; */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: 'Kavoon', cursive;
 }
 .container {
   position: relative;
@@ -38,6 +39,7 @@ p {
   opacity: 0.4;
 }
 .dynamic {
+  font-family: 'Permanent Marker', cursive;
   color: rgb(183, 194, 218);
   opacity: 0;
   animation-name: example;

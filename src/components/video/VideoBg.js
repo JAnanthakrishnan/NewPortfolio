@@ -1,6 +1,6 @@
 import React from 'react';
 import './VideoBg.css';
-import video from './typingFinal.mp4';
+import video from './typingFinalcompressedagain.mp4';
 
 class VideoBg extends React.Component {
   render() {

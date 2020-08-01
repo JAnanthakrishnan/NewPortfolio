@@ -115,11 +115,16 @@ ul {
   animation-iteration-count: 1;
 }
 .menu .second {
-  animation-name: fade-in;
+  animation-name: from-left;
   animation-duration: 500ms;
   animation-iteration-count: 1;
 }
 .menu .third {
+  animation-name: from-right;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+}
+.menu .fourth {
   animation-name: from-right;
   animation-duration: 800ms;
   animation-iteration-count: 1;
@@ -129,7 +134,6 @@ ul {
     transform: translateX(-100px);
   }
   to {
-    transform: translateX(0);
   }
 }
 @keyframes from-right {
@@ -137,16 +141,9 @@ ul {
     transform: translateX(100px);
   }
   to {
-    transform: translateX(0);
   }
 }
-@keyframes fade-in {
-  from {
-    transform: rotate(180deg);
-  }
-  to {
-  }
-}
+
 @media screen and (max-width: 1170px) {
   .navbar .nav-items {
     display: none;
