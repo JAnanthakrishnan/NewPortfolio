@@ -1,23 +1,36 @@
 #projects {
   position: relative;
   background-color: rgb(180, 168, 168);
-  height: 200vh;
-
+  height: 100vh;
+  height: calc(100 * var(--vh));
+  overflow-y: scroll;
   margin: 0;
+  margin-top: 1px;
   padding: 0;
   z-index: 0;
 }
+#projects::-webkit-scrollbar {
+  width: 2px;
+}
+#projects::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+#projects::-webkit-scrollbar-thumb {
+  background: #464747;
+}
 #projects h1 {
   margin: 0;
-  padding-top: 12vh;
+  padding: 10px;
+  padding-top: 15vh;
+  padding-top: calc(15 * var(--vh));
   text-align: center;
   color: rgb(51, 17, 44);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .wrapper {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 300%;
   overflow: hidden;
   background: linear-gradient(
     90deg,
@@ -140,7 +153,7 @@
   background-color: transparent;
   grid-template-columns: auto auto auto;
   grid-gap: 20px 50px;
-  padding: 0;
+  padding: 5px 30px;
 }
 .projectsListItem {
   position: relative;

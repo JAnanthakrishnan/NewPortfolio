@@ -24,10 +24,11 @@ class Landing extends React.Component {
   render() {
     var prevScrollpos = window.pageYOffset;
     var currentScrollPos = window.pageYOffset;
+    // let body = document.getElementsByTagName('body');
     window.onscroll = function () {
       currentScrollPos = window.pageYOffset;
       if (
-        prevScrollpos > currentScrollPos ||
+        prevScrollpos > currentScrollPos - 5 ||
         window.innerHeight - (currentScrollPos % window.innerHeight) < 10
       ) {
         document.getElementById('navbar').style.top = '0rem';
@@ -42,7 +43,7 @@ class Landing extends React.Component {
     return (
       <section className='landing' id='home'>
         <VideoBg />
-        <div className='container'>
+        <div className='container' id='container'>
           <div className='welcome'>
             <div className='line'></div>
             <h3>Welcome</h3>

@@ -7,6 +7,11 @@ import Projects from './components/projects/Projects';
 import About from './components/about/About';
 
 class App extends React.Component {
+  componentDidMount() {
+    document
+      .querySelector(':root')
+      .style.setProperty('--vh', window.innerHeight / 100 + 'px');
+  }
   render() {
     return (
       <div className='App'>
