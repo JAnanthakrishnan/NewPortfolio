@@ -1,37 +1,49 @@
 import React from 'react';
 import './Projects.css';
+import ProjectItem from './ProjectItem';
+import project1 from './images/project1.jpg';
+import project2 from './images/project2.jpg';
 class Projects extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      clicked: false
+      clicked: false,
+      current: null
     };
   }
   projects = [
     {
       name: 'Contact Keeper',
       description: 'A full stack application using the mern stack',
-      technologies: ['react', 'mongodb', 'nodejs']
+      technologies: [
+        'devicon-react-original',
+        'devicon-mongodb-plain-wordmark',
+        'devicon-nodejs-plain-wordmark',
+        'devicon-express-original-wordmark'
+      ],
+      image: project1,
+      github: 'https://github.com/JAnanthakrishnan/contact-keeper',
+      live_demo: 'https://contactkeeper-codewithak.herokuapp.com/'
     },
     {
       name: 'Github Finder',
       description: 'React app to search github',
-      technologies: ['react']
+      technologies: ['react'],
+      image: project2
     }
   ];
   handleClick = (id, e) => {
     e.preventDefault();
-    console.log(this.projects[0]);
     this.setState((state) => ({
-      clicked: !state.clicked
+      clicked: !state.clicked,
+      current: this.projects[id]
     }));
-    console.log(this.state.clicked);
   };
 
   render() {
     return (
       <section id='projects'>
-        <div className='wrapper'>
+        <div className={this.state.clicked ? 'wrapper blur' : 'wrapper'}>
           <div className='box'>
             <div></div>
             <div></div>
@@ -46,11 +58,12 @@ class Projects extends React.Component {
           </div>
           <div className='scrolldown'></div>
         </div>
-
         <h1>Hey.. Checkout some of my projects</h1>
         <div className='projectsList'>
           <div
-            className='projectOne projectsListItem'
+            className={
+              this.state.clicked ? 'projectsListItem open' : 'projectsListItem'
+            }
             onClick={(e) => this.handleClick(0, e)}
           >
             <div id='project1' className='linktoproject'>
@@ -59,6 +72,7 @@ class Projects extends React.Component {
             </div>
           </div>
         </div>
+        {this.state.clicked && <ProjectItem info={this.state} />}
       </section>
     );
   }
