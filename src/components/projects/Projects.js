@@ -29,7 +29,9 @@ class Projects extends React.Component {
       name: 'Github Finder',
       description: 'React app to search github',
       technologies: ['react'],
-      image: project2
+      image: project2,
+      github: 'https://github.com/JAnanthakrishnan/contact-keeper',
+      live_demo: 'https://contactkeeper-codewithak.herokuapp.com/'
     }
   ];
   handleClick = (id, e) => {
@@ -37,6 +39,12 @@ class Projects extends React.Component {
     this.setState((state) => ({
       clicked: !state.clicked,
       current: this.projects[id]
+    }));
+  };
+  outsideClick = () => {
+    this.setState((state) => ({
+      clicked: !state.clicked,
+      current: null
     }));
   };
 
@@ -68,11 +76,24 @@ class Projects extends React.Component {
           >
             <div id='project1' className='linktoproject'>
               Contact Keeper
-              <p>React app to keep track of contacts</p>
+              {/* <p>React app to keep track of contacts</p> */}
+            </div>
+          </div>
+          <div
+            className={
+              this.state.clicked ? 'projectsListItem open' : 'projectsListItem'
+            }
+            onClick={(e) => this.handleClick(1, e)}
+          >
+            <div id='project1' className='linktoproject'>
+              Github Finder
+              {/* <p>React app to search github</p> */}
             </div>
           </div>
         </div>
-        {this.state.clicked && <ProjectItem info={this.state} />}
+        {this.state.clicked && (
+          <ProjectItem info={this.state} outsideClick={this.outsideClick} />
+        )}
       </section>
     );
   }

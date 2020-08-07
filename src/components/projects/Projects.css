@@ -209,6 +209,7 @@
   justify-content: center;
   align-items: center;
 }
+clicked,
 .technologyitem {
   text-transform: capitalize;
   padding: 10px;
@@ -252,7 +253,7 @@
 }
 @media screen and (max-width: 769px) {
   .projectsList {
-    grid-template-columns: auto;
+    grid-template-columns: auto auto;
   }
   .projectitem {
     width: 90vw;
