@@ -1,5 +1,5 @@
 let video = document.getElementsByTagName('video');
-let body = document.getElementsByTagName('body');
+// let body = document.getElementsByTagName('body');
 checkforVideo();
 
 let done = false;

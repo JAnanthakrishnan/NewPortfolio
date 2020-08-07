@@ -118,7 +118,7 @@
   bottom: 0;
   height: 400px;
   background-color: black;
-  z-index: -1;
+  z-index: 10s;
   left: 50%;
   transform: translateX(-50%);
   width: 90vw;
@@ -165,7 +165,7 @@
     rgb(87, 68, 131) 35%,
     rgb(32, 11, 128) 100%
   );
-  opacity: 0.4;
+  opacity: 1;
   border-radius: 10px;
 }
 .linktoproject {
@@ -181,8 +181,8 @@
   transition: transform ease 300ms;
 }
 .linktoproject:hover {
-  transform: translateY(-5px);
-  background-color: rgba(210, 105, 30, 0.192);
+  transform: scale(1.2);
+  /* background-color: rgba(210, 105, 30, 0.192); */
 }
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projectsList {
