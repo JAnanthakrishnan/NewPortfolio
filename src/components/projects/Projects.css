@@ -29,7 +29,7 @@
   color: rgb(51, 17, 44);
 
   /* font-family: 'Kavoon', cursive; */
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: 'Lemonada', cursive;
   font-size: 2rem;
   font-weight: 400;
 
@@ -184,7 +184,7 @@
 .projectsListItem {
   position: relative;
   min-height: 100px;
-  min-width: 70%;
+  min-width: 50%;
   max-width: 80%;
   margin: 20px;
   margin-left: 50%;
@@ -221,7 +221,9 @@
 }
 .linktoproject h4 {
   color: rgb(29, 196, 160);
-  font-family: 'Lemonada', cursive;
+  /* font-family: 'Lemonada', cursive; */
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
   font-size: 1.2rem;
 }
 .technologies {
