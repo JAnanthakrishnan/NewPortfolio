@@ -52,7 +52,7 @@ class Projects extends React.Component {
     if (this.outclick) {
       setTimeout(() => {
         this.outclick = false;
-      }, 600);
+      }, 200);
     }
 
     e.preventDefault();
