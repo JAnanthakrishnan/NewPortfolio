@@ -17,7 +17,11 @@ class ProjectItem extends React.Component {
     const { current } = this.props.info;
     return (
       <div className='projectitem' ref={(node) => (this.node = node)}>
-        <img src={current['image']} alt={current['name']} />
+        <img
+          src={current['image']}
+          alt={current['name']}
+          style={{ maxWidth: '90vw' }}
+        />
         <h3>{current['name']}</h3>
         <ul className='technologies'>
           {current['technologies'].map((tech) => (

@@ -90,7 +90,7 @@ class Projects extends React.Component {
               <h4>Contact Keeper</h4>
             </div>
             <div className='div-description-layer'>
-              <p className='div-description'>More Info</p>
+              <p className='div-description'>Contact Keeper - More Info</p>
             </div>
           </div>
           <div
@@ -103,7 +103,7 @@ class Projects extends React.Component {
               <h4>Github Finder</h4>
             </div>
             <div className='div-description-layer'>
-              <p className='div-description'>More Info</p>
+              <p className='div-description'>Github Finder - More Info</p>
             </div>
           </div>
         </div>
