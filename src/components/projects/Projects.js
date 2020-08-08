@@ -94,9 +94,9 @@ class Projects extends React.Component {
             <div id='project1' className='linktoproject'>
               <h4>Contact Keeper</h4>
             </div>
-            <div className='div-description-layer'>
+            {/* <div className='div-description-layer'>
               <p className='div-description'>Contact Keeper - More Info</p>
-            </div>
+            </div> */}
           </div>
           <div
             className={
@@ -109,9 +109,9 @@ class Projects extends React.Component {
             <div id='project2' className='linktoproject'>
               <h4>Github Finder</h4>
             </div>
-            <div className='div-description-layer'>
+            {/* <div className='div-description-layer'>
               <p className='div-description'>Github Finder - More Info</p>
-            </div>
+            </div> */}
           </div>
         </div>
         {this.state.clicked && (

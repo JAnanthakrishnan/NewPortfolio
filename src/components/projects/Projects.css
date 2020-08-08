@@ -198,7 +198,8 @@
   );
   opacity: 1;
   border-radius: 10px;
-  transition: opacity ease 1000ms;
+
+  transition: scale ease 500ms, opacity ease 1000ms;
 }
 .open {
   opacity: 0;
@@ -214,6 +215,9 @@
   border-radius: 10px;
   cursor: pointer;
   transition: transform ease 300ms;
+}
+.linktoproject:hover {
+  transform: scale(1.3);
 }
 .linktoproject h4 {
   color: rgb(29, 196, 160);
