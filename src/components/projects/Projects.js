@@ -11,10 +11,12 @@ class Projects extends React.Component {
       current: null
     };
   }
+  outclick = false;
   projects = [
     {
       name: 'Contact Keeper',
-      description: 'A full stack application using the mern stack',
+      description:
+        'A full stack application using the mern stack to keep track of contacts',
       technologies: [
         'devicon-react-original',
         'devicon-mongodb-plain-wordmark',
@@ -27,8 +29,8 @@ class Projects extends React.Component {
     },
     {
       name: 'Github Finder',
-      description: 'React app to search github',
-      technologies: ['react'],
+      description: 'React app to search github users',
+      technologies: ['devicon-react-original'],
       image: project2,
       github: 'https://github.com/JAnanthakrishnan/contact-keeper',
       live_demo: 'https://contactkeeper-codewithak.herokuapp.com/'
@@ -36,12 +38,22 @@ class Projects extends React.Component {
   ];
   handleClick = (id, e) => {
     e.preventDefault();
-    this.setState((state) => ({
-      clicked: !state.clicked,
-      current: this.projects[id]
-    }));
+    if (!this.outclick) {
+      this.setState((state) => ({
+        clicked: !state.clicked,
+        current: this.projects[id]
+      }));
+    }
   };
-  outsideClick = () => {
+  outsideClick = (e) => {
+    this.outclick = true;
+    if (this.outclick) {
+      setTimeout(() => {
+        this.outclick = false;
+      }, 600);
+    }
+
+    e.preventDefault();
     this.setState((state) => ({
       clicked: !state.clicked,
       current: null
@@ -75,8 +87,10 @@ class Projects extends React.Component {
             onClick={(e) => this.handleClick(0, e)}
           >
             <div id='project1' className='linktoproject'>
-              Contact Keeper
-              {/* <p>React app to keep track of contacts</p> */}
+              <h4>Contact Keeper</h4>
+            </div>
+            <div className='div-description-layer'>
+              <p className='div-description'>More Info</p>
             </div>
           </div>
           <div
@@ -85,9 +99,11 @@ class Projects extends React.Component {
             }
             onClick={(e) => this.handleClick(1, e)}
           >
-            <div id='project1' className='linktoproject'>
-              Github Finder
-              {/* <p>React app to search github</p> */}
+            <div id='project2' className='linktoproject'>
+              <h4>Github Finder</h4>
+            </div>
+            <div className='div-description-layer'>
+              <p className='div-description'>More Info</p>
             </div>
           </div>
         </div>

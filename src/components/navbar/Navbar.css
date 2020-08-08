@@ -35,7 +35,7 @@ a {
   position: relative;
   margin: 10px;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 1;
 }
 .active {
   /* color: rgb(48, 104, 73); */

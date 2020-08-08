@@ -10,7 +10,7 @@ class ProjectItem extends React.Component {
   handleClick = (e) => {
     if (this.node.contains(e.target)) {
     } else {
-      this.props.outsideClick();
+      this.props.outsideClick(e);
     }
   };
   render() {
