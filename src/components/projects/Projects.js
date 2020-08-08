@@ -8,7 +8,8 @@ class Projects extends React.Component {
     super(props);
     this.state = {
       clicked: false,
-      current: null
+      current: null,
+      project: -10
     };
   }
   outclick = false;
@@ -41,7 +42,8 @@ class Projects extends React.Component {
     if (!this.outclick) {
       this.setState((state) => ({
         clicked: !state.clicked,
-        current: this.projects[id]
+        current: this.projects[id],
+        project: id
       }));
     }
   };
@@ -56,7 +58,8 @@ class Projects extends React.Component {
     e.preventDefault();
     this.setState((state) => ({
       clicked: !state.clicked,
-      current: null
+      current: null,
+      project: -10
     }));
   };
 
@@ -82,7 +85,9 @@ class Projects extends React.Component {
         <div className='projectsList'>
           <div
             className={
-              this.state.clicked ? 'projectsListItem open' : 'projectsListItem'
+              this.state.clicked && this.state.project !== 0
+                ? 'projectsListItem open'
+                : 'projectsListItem'
             }
             onClick={(e) => this.handleClick(0, e)}
           >
@@ -95,7 +100,9 @@ class Projects extends React.Component {
           </div>
           <div
             className={
-              this.state.clicked ? 'projectsListItem open' : 'projectsListItem'
+              this.state.clicked && this.state.project !== 1
+                ? 'projectsListItem open'
+                : 'projectsListItem'
             }
             onClick={(e) => this.handleClick(1, e)}
           >
