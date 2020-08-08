@@ -21,17 +21,17 @@
   background: #464747;
 }
 #projects h1 {
-  margin: 0;
-  padding: 10px;
-  padding-top: 15vh;
-  padding-top: calc(15 * var(--vh));
+  margin-top: 12vh;
+  margin-top: calc(12 * var(--vh));
   text-align: center;
   color: rgb(51, 17, 44);
+  /* border: 10px solid black; */
 
   /* font-family: 'Kavoon', cursive; */
   font-family: 'Lemonada', cursive;
   font-size: 2rem;
   font-weight: 400;
+  /* background-color: rgba(139, 65, 65, 0.568); */
 
   /* text-transform: uppercase; */
 }

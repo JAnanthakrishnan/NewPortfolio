@@ -81,7 +81,7 @@ class Projects extends React.Component {
           </div>
           <div className='scrolldown'></div>
         </div>
-        <h1>Hey.. Checkout some of my projects</h1>
+        <h1>Hey.. Checkout my works</h1>
         <div className='projectsList'>
           <div
             className={
