@@ -79,10 +79,13 @@ class Projects extends React.Component {
             <div></div>
             <div></div>
           </div>
-          <div className='scrolldown'></div>
         </div>
-        <h1>Hey.. Checkout my works</h1>
-        <div className='projectsList'>
+        <div className='projectContainer'>
+          <h1>
+            My <span className='color-secondary'>Works</span>
+          </h1>
+          <p>Checkout Some of my projects..</p>
+          {/* <div className='projectsList'>
           <div
             className={
               this.state.clicked && this.state.project !== 0
@@ -94,9 +97,6 @@ class Projects extends React.Component {
             <div id='project1' className='linktoproject'>
               <h4>Contact Keeper</h4>
             </div>
-            {/* <div className='div-description-layer'>
-              <p className='div-description'>Contact Keeper - More Info</p>
-            </div> */}
           </div>
           <div
             className={
@@ -109,11 +109,219 @@ class Projects extends React.Component {
             <div id='project2' className='linktoproject'>
               <h4>Github Finder</h4>
             </div>
-            {/* <div className='div-description-layer'>
-              <p className='div-description'>Github Finder - More Info</p>
-            </div> */}
+          </div>
+        </div> */}
+          <div className='projectbox'>
+            <div
+              // className={
+              //   this.state.clicked && this.state.project !== 0
+              //     ? 'item open'
+              //     : 'item '
+              // }
+              className='item'
+            >
+              <a
+                href='#!'
+                className='pimage'
+                onClick={(e) => this.handleClick(0, e)}
+              >
+                <img src={project1} alt='Project' />
+              </a>
+              <a
+                href='https://githubfinder-codewithak.netlify.app/'
+                className='btn-light'
+              >
+                <i className='fas fa-eye'></i>
+                {' Github Finder'}
+              </a>
+              <a href='#!' className='btn-dark'>
+                <i className='fab fa-github'></i>
+                {' Github'}
+              </a>
+            </div>
+            <div className='item'>
+              <a
+                href='#!'
+                className='pimage'
+                onClick={(e) => this.handleClick(1, e)}
+              >
+                <img src={project2} alt='Project' />
+              </a>
+              <a
+                href='https://githubfinder-codewithak.netlify.app/'
+                className='btn-light'
+              >
+                <i className='fas fa-eye'></i>
+                {' Contact Keeper'}
+              </a>
+              <a href='#!' className='btn-dark'>
+                <i className='fab fa-github'></i>
+                {' Github'}
+              </a>
+            </div>
+            <div className='item'>
+              <a
+                href='#!'
+                className='pimage'
+                onClick={(e) => this.handleClick(0, e)}
+              >
+                <img src={project1} alt='Project' />
+              </a>
+              <a
+                href='https://githubfinder-codewithak.netlify.app/'
+                className='btn-light'
+              >
+                <i className='fas fa-eye'></i>
+                {' Github Finder'}
+              </a>
+              <a href='#!' className='btn-dark'>
+                <i className='fab fa-github'></i>
+                {' Github'}
+              </a>
+            </div>
+            <div className='item'>
+              <a
+                href='#!'
+                className='pimage'
+                onClick={(e) => this.handleClick(0, e)}
+              >
+                <img src={project1} alt='Project' />
+              </a>
+              <a
+                href='https://githubfinder-codewithak.netlify.app/'
+                className='btn-light'
+              >
+                <i className='fas fa-eye'></i>
+                {' Github Finder'}
+              </a>
+              <a href='#!' className='btn-dark'>
+                <i className='fab fa-github'></i>
+                {' Github'}
+              </a>
+            </div>
+            <div className='item'>
+              <a
+                href='#!'
+                className='pimage'
+                onClick={(e) => this.handleClick(0, e)}
+              >
+                <img src={project1} alt='Project' />
+              </a>
+              <a
+                href='https://githubfinder-codewithak.netlify.app/'
+                className='btn-light'
+              >
+                <i className='fas fa-eye'></i>
+                {' Github Finder'}
+              </a>
+              <a href='#!' className='btn-dark'>
+                <i className='fab fa-github'></i>
+                {' Github'}
+              </a>
+            </div>
+            <div className='item'>
+              <a
+                href='#!'
+                className='pimage'
+                onClick={(e) => this.handleClick(0, e)}
+              >
+                <img src={project1} alt='Project' />
+              </a>
+              <a
+                href='https://githubfinder-codewithak.netlify.app/'
+                className='btn-light'
+              >
+                <i className='fas fa-eye'></i>
+                {' Github Finder'}
+              </a>
+              <a href='#!' className='btn-dark'>
+                <i className='fab fa-github'></i>
+                {' Github'}
+              </a>
+            </div>
+            <div className='item'>
+              <a
+                href='#!'
+                className='pimage'
+                onClick={(e) => this.handleClick(0, e)}
+              >
+                <img src={project1} alt='Project' />
+              </a>
+              <a
+                href='https://githubfinder-codewithak.netlify.app/'
+                className='btn-light'
+              >
+                <i className='fas fa-eye'></i>
+                {' Github Finder'}
+              </a>
+              <a href='#!' className='btn-dark'>
+                <i className='fab fa-github'></i>
+                {' Github'}
+              </a>
+            </div>
+            <div className='item'>
+              <a
+                href='#!'
+                className='pimage'
+                onClick={(e) => this.handleClick(0, e)}
+              >
+                <img src={project1} alt='Project' />
+              </a>
+              <a
+                href='https://githubfinder-codewithak.netlify.app/'
+                className='btn-light'
+              >
+                <i className='fas fa-eye'></i>
+                {' Github Finder'}
+              </a>
+              <a href='#!' className='btn-dark'>
+                <i className='fab fa-github'></i>
+                {' Github'}
+              </a>
+            </div>
+            <div className='item'>
+              <a
+                href='#!'
+                className='pimage'
+                onClick={(e) => this.handleClick(0, e)}
+              >
+                <img src={project1} alt='Project' />
+              </a>
+              <a
+                href='https://githubfinder-codewithak.netlify.app/'
+                className='btn-light'
+              >
+                <i className='fas fa-eye'></i>
+                {' Github Finder'}
+              </a>
+              <a href='#!' className='btn-dark'>
+                <i className='fab fa-github'></i>
+                {' Github'}
+              </a>
+            </div>
+            <div className='item'>
+              <a
+                href='#!'
+                className='pimage'
+                onClick={(e) => this.handleClick(0, e)}
+              >
+                <img src={project1} alt='Project' />
+              </a>
+              <a
+                href='https://githubfinder-codewithak.netlify.app/'
+                className='btn-light'
+              >
+                <i className='fas fa-eye'></i>
+                {' Github Finder'}
+              </a>
+              <a href='#!' className='btn-dark'>
+                <i className='fab fa-github'></i>
+                {' Github'}
+              </a>
+            </div>
           </div>
         </div>
+
         {this.state.clicked && (
           <ProjectItem info={this.state} outsideClick={this.outsideClick} />
         )}

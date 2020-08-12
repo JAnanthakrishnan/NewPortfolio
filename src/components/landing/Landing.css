@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kavoon&family=Permanent+Marker&display=swap');
-.landing {
-  font-family: 'Kavoon', cursive;
-}
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Slabo+27px&display=swap');
 .container {
   position: relative;
   display: flex;
@@ -14,6 +11,7 @@
   justify-content: space-between;
 }
 .caption {
+  font-family: 'Slabo 27px', serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,7 +35,7 @@ p {
   opacity: 0.4;
 }
 .dynamic {
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'EB Garamond', serif;
   color: rgb(183, 194, 218);
   opacity: 0;
   animation-name: example;

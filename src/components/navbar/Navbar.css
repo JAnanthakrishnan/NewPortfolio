@@ -25,7 +25,7 @@
 }
 
 .link,
-a {
+.navbar a {
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
@@ -35,9 +35,9 @@ a {
   position: relative;
   margin: 10px;
   cursor: pointer;
-  opacity: 1;
+  opacity: 0.9;
 }
-.active {
+.navbar .active {
   /* color: rgb(48, 104, 73); */
   color: rgb(255, 255, 0);
 }
@@ -166,8 +166,12 @@ ul {
   .menu .icon {
     display: block;
     position: fixed;
-    top: -0.5rem;
-    right: 0rem;
+    top: 1rem;
+    right: 1rem;
     z-index: 10;
+  }
+  .menu a {
+    color: #fff;
+    text-decoration: none;
   }
 }
