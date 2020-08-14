@@ -34,11 +34,11 @@ class ProjectItem extends React.Component {
           <a href={current['github']}>
             <i className='devicon-github-plain'></i>
           </a>
-          {current['live_demo'].length > 0 ? (
+          {/* {current['live_demo'].length > 0 ? (
             <a href={current['live-demo']}>
               <i className='fa fa-link'></i>
             </a>
-          ) : null}
+          ) : null} */}
         </div>
 
         <p>{current['description']}</p>

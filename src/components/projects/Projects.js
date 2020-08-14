@@ -1,8 +1,14 @@
 import React from 'react';
 import './Projects.css';
 import ProjectItem from './ProjectItem';
+import githubFinder from './images/githubFinder.png';
+import contactKeeper from './images/contactKeeper.png';
+import itlogger from './images/itlogger.png';
+import memeswithak from './images/memeswithak.png';
 import project1 from './images/project1.jpg';
 import project2 from './images/project2.jpg';
+import project3 from './images/project3.jpg';
+
 class Projects extends React.Component {
   constructor(props) {
     super(props);
@@ -15,26 +21,66 @@ class Projects extends React.Component {
   outclick = false;
   projects = [
     {
+      name: 'Github Finder',
+      description: 'React app to search github users',
+      technologies: ['devicon-react-original-wordmark'],
+      image: githubFinder,
+      github: 'https://github.com/JAnanthakrishnan/Github-Finder',
+      live_demo: 'https://githubfinder-codewithak.netlify.app/'
+    },
+    {
       name: 'Contact Keeper',
       description:
         'A full stack application using the mern stack to keep track of contacts',
       technologies: [
-        'devicon-react-original',
+        'devicon-react-original-wordmark',
         'devicon-mongodb-plain-wordmark',
         'devicon-nodejs-plain-wordmark',
         'devicon-express-original-wordmark'
       ],
-      image: project1,
+      image: contactKeeper,
       github: 'https://github.com/JAnanthakrishnan/contact-keeper',
       live_demo: 'https://contactkeeper-codewithak.herokuapp.com/'
     },
     {
-      name: 'Github Finder',
-      description: 'React app to search github users',
-      technologies: ['devicon-react-original'],
+      name: 'IT Logger',
+      description: 'A react app to keep track of logs',
+      technologies: ['devicon-react-original-wordmark'],
+      image: itlogger,
+      github: 'https://github.com/JAnanthakrishnan/it-logger',
+      live_demo: '#!'
+    },
+    {
+      name: 'Meme Generator',
+      description: 'A react app to keep track of generate memes',
+      technologies: ['devicon-react-original-wordmark'],
+      image: memeswithak,
+      github: 'https://github.com/JAnanthakrishnan/MemeGenerator',
+      live_demo: 'https://memeswithak.netlify.app/#/'
+    },
+    {
+      name: 'To-do List',
+      description: 'My first react app for a to-do list ',
+      technologies: ['devicon-react-original-wordmark'],
+      image: project1,
+      github: 'https://github.com/JAnanthakrishnan/React-learn',
+      live_demo: '#!'
+    },
+    {
+      name: 'To-do List',
+      description: 'My first vue app for a to-do list',
+      technologies: ['devicon-vuejs-plain-wordmark'],
       image: project2,
-      github: 'https://github.com/JAnanthakrishnan/contact-keeper',
-      live_demo: 'https://contactkeeper-codewithak.herokuapp.com/'
+      github: 'https://github.com/JAnanthakrishnan/vue_learn',
+      live_demo: '#!'
+    },
+    {
+      name: 'To-do List',
+      description: 'My first angular app for a to-do list',
+      technologies: ['devicon-angularjs-plain-wordmark'],
+      image: project3,
+      github: 'https://github.com/JAnanthakrishnan/Angular_learn',
+      live_demo: '#!'
     }
   ];
   handleClick = (id, e) => {
@@ -85,32 +131,7 @@ class Projects extends React.Component {
             My <span className='color-secondary'>Works</span>
           </h1>
           <p>Checkout Some of my projects..</p>
-          {/* <div className='projectsList'>
-          <div
-            className={
-              this.state.clicked && this.state.project !== 0
-                ? 'projectsListItem open'
-                : 'projectsListItem'
-            }
-            onClick={(e) => this.handleClick(0, e)}
-          >
-            <div id='project1' className='linktoproject'>
-              <h4>Contact Keeper</h4>
-            </div>
-          </div>
-          <div
-            className={
-              this.state.clicked && this.state.project !== 1
-                ? 'projectsListItem open'
-                : 'projectsListItem'
-            }
-            onClick={(e) => this.handleClick(1, e)}
-          >
-            <div id='project2' className='linktoproject'>
-              <h4>Github Finder</h4>
-            </div>
-          </div>
-        </div> */}
+
           <div className='projectbox'>
             <div
               // className={
@@ -125,16 +146,13 @@ class Projects extends React.Component {
                 className='pimage'
                 onClick={(e) => this.handleClick(0, e)}
               >
-                <img src={project1} alt='Project' />
+                <img src={githubFinder} alt='Project' />
               </a>
-              <a
-                href='https://githubfinder-codewithak.netlify.app/'
-                className='btn-light'
-              >
+              <a href={this.projects[0].live_demo} className='btn-light'>
                 <i className='fas fa-eye'></i>
                 {' Github Finder'}
               </a>
-              <a href='#!' className='btn-dark'>
+              <a href={this.projects[0].github} className='btn-dark'>
                 <i className='fab fa-github'></i>
                 {' Github'}
               </a>
@@ -145,16 +163,13 @@ class Projects extends React.Component {
                 className='pimage'
                 onClick={(e) => this.handleClick(1, e)}
               >
-                <img src={project2} alt='Project' />
+                <img src={contactKeeper} alt='Project' />
               </a>
-              <a
-                href='https://githubfinder-codewithak.netlify.app/'
-                className='btn-light'
-              >
+              <a href={this.projects[1].live_demo} className='btn-light'>
                 <i className='fas fa-eye'></i>
                 {' Contact Keeper'}
               </a>
-              <a href='#!' className='btn-dark'>
+              <a href={this.projects[1].github} className='btn-dark'>
                 <i className='fab fa-github'></i>
                 {' Github'}
               </a>
@@ -163,18 +178,15 @@ class Projects extends React.Component {
               <a
                 href='#!'
                 className='pimage'
-                onClick={(e) => this.handleClick(0, e)}
+                onClick={(e) => this.handleClick(2, e)}
               >
-                <img src={project1} alt='Project' />
+                <img src={itlogger} alt='Project' />
               </a>
-              <a
-                href='https://githubfinder-codewithak.netlify.app/'
-                className='btn-light'
-              >
+              <a href={this.projects[2].live_demo} className='btn-light'>
                 <i className='fas fa-eye'></i>
-                {' Github Finder'}
+                {' IT Logger'}
               </a>
-              <a href='#!' className='btn-dark'>
+              <a href={this.projects[2].github} className='btn-dark'>
                 <i className='fab fa-github'></i>
                 {' Github'}
               </a>
@@ -183,18 +195,15 @@ class Projects extends React.Component {
               <a
                 href='#!'
                 className='pimage'
-                onClick={(e) => this.handleClick(0, e)}
+                onClick={(e) => this.handleClick(3, e)}
               >
-                <img src={project1} alt='Project' />
+                <img src={memeswithak} alt='Project' />
               </a>
-              <a
-                href='https://githubfinder-codewithak.netlify.app/'
-                className='btn-light'
-              >
+              <a href={this.projects[3].live_demo} className='btn-light'>
                 <i className='fas fa-eye'></i>
-                {' Github Finder'}
+                {' Meme-generator'}
               </a>
-              <a href='#!' className='btn-dark'>
+              <a href={this.projects[3].github} className='btn-dark'>
                 <i className='fab fa-github'></i>
                 {' Github'}
               </a>
@@ -203,18 +212,15 @@ class Projects extends React.Component {
               <a
                 href='#!'
                 className='pimage'
-                onClick={(e) => this.handleClick(0, e)}
+                onClick={(e) => this.handleClick(4, e)}
               >
                 <img src={project1} alt='Project' />
               </a>
-              <a
-                href='https://githubfinder-codewithak.netlify.app/'
-                className='btn-light'
-              >
+              <a href={this.projects[4].live_demo} className='btn-light'>
                 <i className='fas fa-eye'></i>
-                {' Github Finder'}
+                {' To do list - React'}
               </a>
-              <a href='#!' className='btn-dark'>
+              <a href={this.projects[4].github} className='btn-dark'>
                 <i className='fab fa-github'></i>
                 {' Github'}
               </a>
@@ -223,18 +229,15 @@ class Projects extends React.Component {
               <a
                 href='#!'
                 className='pimage'
-                onClick={(e) => this.handleClick(0, e)}
+                onClick={(e) => this.handleClick(5, e)}
               >
-                <img src={project1} alt='Project' />
+                <img src={project2} alt='Project' />
               </a>
-              <a
-                href='https://githubfinder-codewithak.netlify.app/'
-                className='btn-light'
-              >
+              <a href={this.projects[5].live_demo} className='btn-light'>
                 <i className='fas fa-eye'></i>
-                {' Github Finder'}
+                {' To do list - Vue'}
               </a>
-              <a href='#!' className='btn-dark'>
+              <a href={this.projects[5].github} className='btn-dark'>
                 <i className='fab fa-github'></i>
                 {' Github'}
               </a>
@@ -243,78 +246,15 @@ class Projects extends React.Component {
               <a
                 href='#!'
                 className='pimage'
-                onClick={(e) => this.handleClick(0, e)}
+                onClick={(e) => this.handleClick(6, e)}
               >
-                <img src={project1} alt='Project' />
+                <img src={project3} alt='Project' />
               </a>
-              <a
-                href='https://githubfinder-codewithak.netlify.app/'
-                className='btn-light'
-              >
+              <a href={this.projects[6].live_demo} className='btn-light'>
                 <i className='fas fa-eye'></i>
-                {' Github Finder'}
+                {' To do list - Angular'}
               </a>
-              <a href='#!' className='btn-dark'>
-                <i className='fab fa-github'></i>
-                {' Github'}
-              </a>
-            </div>
-            <div className='item'>
-              <a
-                href='#!'
-                className='pimage'
-                onClick={(e) => this.handleClick(0, e)}
-              >
-                <img src={project1} alt='Project' />
-              </a>
-              <a
-                href='https://githubfinder-codewithak.netlify.app/'
-                className='btn-light'
-              >
-                <i className='fas fa-eye'></i>
-                {' Github Finder'}
-              </a>
-              <a href='#!' className='btn-dark'>
-                <i className='fab fa-github'></i>
-                {' Github'}
-              </a>
-            </div>
-            <div className='item'>
-              <a
-                href='#!'
-                className='pimage'
-                onClick={(e) => this.handleClick(0, e)}
-              >
-                <img src={project1} alt='Project' />
-              </a>
-              <a
-                href='https://githubfinder-codewithak.netlify.app/'
-                className='btn-light'
-              >
-                <i className='fas fa-eye'></i>
-                {' Github Finder'}
-              </a>
-              <a href='#!' className='btn-dark'>
-                <i className='fab fa-github'></i>
-                {' Github'}
-              </a>
-            </div>
-            <div className='item'>
-              <a
-                href='#!'
-                className='pimage'
-                onClick={(e) => this.handleClick(0, e)}
-              >
-                <img src={project1} alt='Project' />
-              </a>
-              <a
-                href='https://githubfinder-codewithak.netlify.app/'
-                className='btn-light'
-              >
-                <i className='fas fa-eye'></i>
-                {' Github Finder'}
-              </a>
-              <a href='#!' className='btn-dark'>
+              <a href={this.projects[6].github} className='btn-dark'>
                 <i className='fab fa-github'></i>
                 {' Github'}
               </a>

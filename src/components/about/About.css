@@ -3,22 +3,46 @@
   background-color: rgb(180, 168, 168);
   height: 100vh;
   height: calc(100 * var(--vh));
+  overflow-y: scroll;
   margin: 0;
-  padding: 0;
   margin-top: 1px;
+  padding: 0;
   z-index: 0;
 }
+
+#about::-webkit-scrollbar {
+  width: 2px;
+}
+#about::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+#about::-webkit-scrollbar-thumb {
+  background: #464747;
+}
 #about h1 {
-  margin-top: 10vh;
-  text-align: center;
-  color: rgb(73, 70, 67);
-  font-weight: bold;
-  text-transform: uppercase;
+  margin-top: 7vh;
+  margin-top: calc(7 * var(--vh));
+}
+.aboutcontainer {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+}
+.greeting {
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  font-size: 1.2rem;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  background-color: #c4c4c46b;
 }
 .wrapper2 {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 500%;
   overflow: hidden;
   background: linear-gradient(
     90deg,
@@ -28,71 +52,110 @@
   );
   z-index: -1;
 }
+/* .first-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.first-part img {
+  margin-left: 50px;
+  border-radius: 50%;
+}
+.bio {
+  padding-left: 10%;
+}*/
+.bio p {
+  text-align: left;
+  margin-left: 0;
+  /* margin-top: 20px; */
+  padding-left: 0;
+  font-size: 20px;
+  width: 100%;
+}
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+  grid-template-columns: repeat(3, 1fr);
+}
+.about-info .bio-image {
+  grid-area: bioimage;
+  margin: auto;
+  border-radius: 50%;
+  border: #eece1a 3px solid;
+}
+.about-info .bio {
+  grid-area: bio;
+  font-size: 1.5rem;
+}
+.about-info .job-1 {
+  grid-area: job1;
+  background: #515151 url('./images/project2.jpg') no-repeat;
+}
+.about-info .job-2 {
+  grid-area: job2;
+  background: #515151 url('./images/violin.jpg') no-repeat center center / cover;
+}
+.about-info .job-3 {
+  grid-area: job3;
+  background: #515151 url('./images/project5.jpg') no-repeat;
+}
+.about-info .job {
+  padding: 0.5rem;
+  color: #fff;
+  border-bottom: #eece1a 5px solid;
+  margin: 10px;
+  min-height: 200px;
+}
 
-.box div {
-  position: relative;
-  height: 60px;
-  width: 60px;
-  background-color: transparent;
-  border: 6px solid rgba(255, 255, 255, 0.8);
+.job p {
+  text-align: left;
+  padding: 20px;
+  padding-left: 10px;
+  width: 100%;
 }
-.box div:nth-child(1) {
-  top: 12%;
-  left: 42%;
-  animation: animate 10s linear infinite;
+.job h3,
+h6 {
+  padding: 10px;
 }
-.box div:nth-child(2) {
-  top: 70%;
-  left: 50%;
-  animation: animate 7s linear infinite;
-}
-.box div:nth-child(3) {
-  top: 17%;
-  left: 6%;
-  animation: animate 9s linear infinite;
-}
-.box div:nth-child(4) {
-  top: 20%;
-  left: 60%;
-  animation: animate 10s linear infinite;
-}
-.box div:nth-child(5) {
-  top: 67%;
-  left: 10%;
-  animation: animate 6s linear infinite;
-}
-.box div:nth-child(6) {
-  top: 80%;
-  left: 70%;
-  animation: animate 12s linear infinite;
-}
-.box div:nth-child(7) {
-  top: 60%;
-  left: 80%;
-  animation: animate 15s linear infinite;
-}
-.box div:nth-child(8) {
-  top: 32%;
-  left: 25%;
-  animation: animate 16s linear infinite;
-}
-.box div:nth-child(9) {
-  top: 90%;
-  left: 25%;
-  animation: animate 9s linear infinite;
-}
-.box div:nth-child(10) {
-  top: 20%;
-  left: 80%;
-  animation: animate 5s linear infinite;
-}
-@keyframes animate {
-  0% {
-    transform: scale(0) translateY(0) rotate(0);
-    opacity: 1;
+
+@media screen and (max-width: 768px) {
+  .bio h3 {
+    text-align: center;
   }
-  100% {
-    transform: scale(1.3) translateY(-90px) rotate(360deg);
-    opacity: 0;
+  .about-info {
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-columns: 1fr;
+  }
+  .greeting {
+    font-size: 18px;
+  }
+  .about-info img {
+    max-width: 200px;
+  }
+  .bio h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .bio p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .greeting {
+    font-size: 15px;
+  }
+  .bio h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .bio p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .about-info img {
+    max-width: 200px;
   }
 }

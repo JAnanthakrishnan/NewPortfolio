@@ -239,9 +239,16 @@
   font-size: 4rem;
 }
 .devicon-react-original,
+.devicon-react-original-wordmark,
 .devicon-mongodb-plain-wordmark {
   font-size: 2rem;
   padding: 20px;
+}
+.devicon-vuejs-plain-wordmark {
+  font-size: 3rem;
+}
+.devicon-angularjs-plain-wordmark {
+  font-size: 4rem;
 }
 .hosting {
   display: flex;
@@ -320,6 +327,7 @@
     font-size: 4rem;
   }
   .devicon-react-original,
+  .devicon-react-original-wordmark,
   .devicon-mongodb-plain-wordmark {
     font-size: 2rem;
     padding: 15px;
@@ -342,6 +350,7 @@
     font-size: 3rem;
   }
   .devicon-react-original,
+  .devicon-react-original-wordmark,
   .devicon-mongodb-plain-wordmark {
     font-size: 1.5rem;
     padding: 4px;
@@ -362,6 +371,12 @@
 @media screen and (max-width: 768px) {
   .projectbox {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .devicon-vuejs-plain-wordmark {
+    font-size: 2rem;
+  }
+  .devicon-angularjs-plain-wordmark {
+    font-size: 3rem;
   }
 }
 
