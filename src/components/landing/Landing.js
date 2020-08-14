@@ -1,13 +1,13 @@
-import React from 'react';
-import VideoBg from '../video/VideoBg';
-import './Landing.css';
+import React from "react";
+import VideoBg from "../video/VideoBg";
+import "./Landing.css";
 
 class Landing extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      elements: ['PROGRAMMER', 'DEVELOPER', 'DESIGNER'],
-      index: 0
+      elements: ["PROGRAMMER", "DEVELOPER", "DESIGNER"],
+      index: 0,
     };
   }
   componentDidMount() {
@@ -18,7 +18,7 @@ class Landing extends React.Component {
   }
   UpdateCurrent() {
     this.setState((state) => ({
-      index: (state.index + 1) % state.elements.length
+      index: (state.index + 1) % state.elements.length,
     }));
   }
   render() {
@@ -31,26 +31,26 @@ class Landing extends React.Component {
         prevScrollpos > currentScrollPos - 5 ||
         window.innerHeight - (currentScrollPos % window.innerHeight) < 10
       ) {
-        document.getElementById('navbar').style.top = '0rem';
-        document.getElementById('ak_logo').style.top = '0rem';
+        document.getElementById("navbar").style.top = "0rem";
+        document.getElementById("ak_logo").style.top = "0rem";
       } else {
-        document.getElementById('navbar').style.top = '-100px';
-        document.getElementById('ak_logo').style.top = '-100px';
+        document.getElementById("navbar").style.top = "-100px";
+        document.getElementById("ak_logo").style.top = "-100px";
       }
       prevScrollpos = currentScrollPos;
     };
 
     return (
-      <section className='landing' id='home'>
+      <section className="landing" id="home">
         <VideoBg />
-        <div className='container' id='container'>
-          <div className='welcome'>
-            <div className='line'></div>
+        <div className="container" id="container">
+          <div className="welcome">
+            <div className="line"></div>
             <h3>Welcome</h3>
           </div>
-          <div className='caption'>
+          <div className="caption">
             <h1>J ANANTHAKRISHNAN</h1>
-            <h1 className='dynamic'>{this.state.elements[this.state.index]}</h1>
+            <h1 className="dynamic">{this.state.elements[this.state.index]}</h1>
           </div>
           <p>"Code and Develop"</p>
         </div>

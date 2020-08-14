@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap");
 #projects {
   position: relative;
   background-color: rgb(180, 168, 168);
@@ -24,11 +24,14 @@
   margin-top: 6vh;
   margin-top: calc(6 * var(--vh));
 }
+.projectContainer {
+  padding: 50px;
+}
 .wrapper {
   position: absolute;
   width: 100%;
-  height: 300%;
-  overflow: hidden;
+  height: 100%;
+
   background: linear-gradient(
     90deg,
     rgb(44, 47, 48) 0%,
@@ -213,7 +216,7 @@
 .linktoproject h4 {
   color: rgb(13, 12, 58);
   /* font-family: 'Lemonada', cursive; */
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 
   font-size: 1.2rem;
 }
@@ -300,9 +303,7 @@
   background: #c4c4c4;
   color: #333;
 }
-.projectContainer {
-  padding: 50px;
-}
+
 .item a {
   margin-top: 5px;
   text-decoration: none;

@@ -1,4 +1,4 @@
-let video = document.getElementsByTagName('video');
+let video = document.getElementsByTagName("video");
 // let body = document.getElementsByTagName('body');
 checkforVideo();
 
@@ -9,11 +9,11 @@ function checkforVideo() {
   var b = setInterval(() => {
     if (video[0].readyState >= 3 && done === false) {
       // body[0].style.overflow = 'visible';
-      document.getElementById('overlay').className = 'hideloader';
-      document.getElementById('preloader').className = 'hideloader';
-      document.getElementById('diamond').className = 'hideloader';
-      document.getElementById('movement').className = 'hideloader';
-      console.log('done');
+      document.getElementById("overlay").className = "hideloader";
+      document.getElementById("preloader").className = "hideloader";
+      document.getElementById("diamond").className = "hideloader";
+      document.getElementById("movement").className = "hideloader";
+      console.log("done");
       done = true;
       clearInterval(b);
     }
@@ -23,11 +23,25 @@ function checkforVideo() {
     // document.getElementById('about').style.height = window.innerHeight;
   }, 500);
 }
-window.addEventListener('resize', () => {
+window.onload = function () {
+  let wrapp = document.getElementById("project-wrapper");
+  let projects = document.getElementById("projects");
+
+  wrapp.style.minHeight = projects.scrollHeight + "px";
+  document.getElementById("navbar").style.top = "0rem";
+  document.getElementById("ak_logo").style.top = "0rem";
+};
+
+window.addEventListener("resize", () => {
   document
-    .querySelector(':root')
-    .style.setProperty('--vh', window.innerHeight / 100 + 'px');
+    .querySelector(":root")
+    .style.setProperty("--vh", window.innerHeight / 100 + "px");
+  let wrapp = document.getElementById("project-wrapper");
+  let projects = document.getElementById("projects");
+
+  wrapp.style.minHeight = projects.scrollHeight + "px";
 });
+
 // setInterval(() => {
 //   if (document.location.hash === '#projects') {
 //     body[0].style.overflow = 'visible';

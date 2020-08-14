@@ -10,7 +10,7 @@ html {
 }
 /*Overlay*/
 body::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
