@@ -1,10 +1,10 @@
-import React from 'react';
-import portrait from './images/portrait.jpg';
-import './About.css';
+import React from "react";
+import portrait from "./images/portrait.jpg";
+import "./About.css";
 const About = () => {
   return (
-    <section className='wrapper2' id='about'>
-      <div className='box'>
+    <section className="wrapper2" id="about">
+      <div className="box">
         <div></div>
         <div></div>
         <div></div>
@@ -16,11 +16,11 @@ const About = () => {
         <div></div>
         <div></div>
       </div>
-      <div className='aboutcontainer'>
+      <div className="aboutcontainer">
         <h1>
-          About <span className='color-secondary'>Me</span>
+          About <span className="color-secondary">Me</span>
         </h1>
-        <p className='greeting'>Let me tell you a few things ...</p>
+        <p className="greeting">Let me tell you a few things ...</p>
         {/* <div className='aboutcontainer'>
         <h1>
           About <span className='color-secondary'>Me</span>
@@ -64,10 +64,10 @@ const About = () => {
           </div>
         </div>
       </div> */}
-        <div className='about-info'>
-          <img src={portrait} alt='John Doe' className='bio-image' />
+        <div className="about-info">
+          <img src={portrait} alt="John Doe" className="bio-image" />
 
-          <div className='bio'>
+          <div className="bio">
             {/* <h3 className='color-secondary'>BIO</h3> */}
             <p>
               Currently studying Computer Science and Engineering at NIT
@@ -75,7 +75,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className='job job-1'>
+          <div className="job job-1">
             <h3>Storilabs</h3>
             <h6>Part Time Intern</h6>
             <p>
@@ -84,7 +84,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className='job job-2'>
+          <div className="job job-2">
             <h3>Music Club</h3>
             <h6>Violin</h6>
             <p>
@@ -92,10 +92,10 @@ const About = () => {
             </p>
           </div>
 
-          <div className='job job-3'>
+          <div className="job job-3">
             <h3>Hobbies</h3>
-            <h6>Free time pass</h6>
-            <p>Web Development, Learning React Vue & Angular.</p>
+            <h6>Web Development, Gaming</h6>
+            <p>Web Development and coding</p>
           </div>
         </div>
       </div>
