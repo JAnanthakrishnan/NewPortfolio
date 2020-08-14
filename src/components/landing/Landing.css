@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Slabo+27px&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Slabo+27px&display=swap");
+@font-face {
+  font-family: valorant;
+  src: url("./fonts/Valorant\ Font.ttf");
+}
+@font-face {
+  font-family: red-dead;
+  src: url("./fonts/CHINESER.TTF");
+}
 .container {
   position: relative;
   display: flex;
@@ -11,7 +19,7 @@
   justify-content: space-between;
 }
 .caption {
-  font-family: 'Slabo 27px', serif;
+  font-family: valorant;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,13 +37,14 @@ h1 {
 p {
   color: white;
   text-align: center;
-  font-family: Ubuntu;
+  font-family: "Raleway", sans-serif;
   width: 50%;
   padding: 20px;
   opacity: 0.4;
 }
 .dynamic {
-  font-family: 'EB Garamond', serif;
+  font-family: red-dead;
+  letter-spacing: 10px;
   color: rgb(183, 194, 218);
   opacity: 0;
   animation-name: example;
@@ -67,7 +76,6 @@ p {
   align-items: center;
 }
 .welcome {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -83,12 +91,12 @@ p {
 }
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   h1 {
-    font-size: 40px;
+    font-size: 50px;
   }
 }
 @media screen and (max-width: 769px) {
   h1 {
-    font-size: 25px;
+    font-size: 30px;
   }
   .line {
     max-height: 20px;
@@ -99,5 +107,8 @@ p {
   }
   p {
     font-size: 15px;
+  }
+  .dynamic {
+    letter-spacing: 10px;
   }
 }

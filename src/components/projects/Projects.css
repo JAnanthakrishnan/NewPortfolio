@@ -21,11 +21,15 @@
   background: #464747;
 }
 #projects h1 {
-  margin-top: 6vh;
-  margin-top: calc(6 * var(--vh));
+  font-family: valorant;
+  margin-top: 7vh;
+  margin-top: calc(7 * var(--vh));
 }
 .projectContainer {
   padding: 50px;
+}
+.projectContainer p {
+  font-family: "Raleway", sans-serif;
 }
 .wrapper {
   position: absolute;
@@ -216,7 +220,6 @@
 .linktoproject h4 {
   color: rgb(13, 12, 58);
   /* font-family: 'Lemonada', cursive; */
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 
   font-size: 1.2rem;
 }

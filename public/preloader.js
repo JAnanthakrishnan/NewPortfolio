@@ -1,7 +1,10 @@
 let video = document.getElementsByTagName("video");
 // let body = document.getElementsByTagName('body');
 checkforVideo();
+let wrapp = document.getElementById("project-wrapper");
+let projects = document.getElementById("projects");
 
+wrapp.style.minHeight = projects.scrollHeight + "px";
 let done = false;
 function checkforVideo() {
   //Every 500ms, check if the video element has loaded
