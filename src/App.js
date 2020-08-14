@@ -1,26 +1,28 @@
-import React from 'react';
-import './App.css';
-import Landing from './components/landing/Landing';
-import Navbar from './components/navbar/Navbar';
-import Logo from './components/logo/Logo';
-import Projects from './components/projects/Projects';
-import About from './components/about/About';
+import React from "react";
+import "./App.css";
+import Landing from "./components/landing/Landing";
+import Navbar from "./components/navbar/Navbar";
+import Logo from "./components/logo/Logo";
+import Projects from "./components/projects/Projects";
+import About from "./components/about/About";
+import Contact from "./components/contacts/Contact";
 
 class App extends React.Component {
   componentDidMount() {
     document
-      .querySelector(':root')
-      .style.setProperty('--vh', window.innerHeight / 100 + 'px');
+      .querySelector(":root")
+      .style.setProperty("--vh", window.innerHeight / 100 + "px");
   }
   render() {
     return (
-      <div className='App'>
+      <div className="App">
         <Logo />
         <Navbar />
-        <div className='AppContainer'>
+        <div className="AppContainer">
           <Landing />
           <Projects />
           <About />
+          <Contact />
         </div>
       </div>
     );
