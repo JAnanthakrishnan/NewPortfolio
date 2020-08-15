@@ -21,19 +21,19 @@ const Contact = () => {
           Contact <span className="color-secondary">Me</span>
         </h1>
         <p className="greeting">This is how you can contact me...</p>
-      </div>
-      <div class="boxes">
-        <div>
-          <span class="color-secondary">Email:</span>
-          {" jananthakrishnan99@oulook.com"}
-        </div>
-        <div>
-          <span class="color-secondary">Phone:</span>
-          {" (+91) 963-324-3218"}
-        </div>
-        <div>
-          <span class="color-secondary">Address:</span>
-          {" MHB NIT Calicut"}
+        <div class="boxes">
+          <div>
+            <span class="color-secondary">Email:</span>
+            {" jananthakrishnan99@oulook.com"}
+          </div>
+          <div>
+            <span class="color-secondary">Phone:</span>
+            {" (+91) 963-324-3218"}
+          </div>
+          <div>
+            <span class="color-secondary">Address:</span>
+            {" MHB NIT Calicut"}
+          </div>
         </div>
       </div>
     </section>
